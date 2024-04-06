@@ -15,7 +15,6 @@
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
-
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -34,14 +33,20 @@
             <li>Measuring to ensure updates are a success</li>
             <li>And much more!</li>
           </ul>
-
-          <form name="mail" id="mail">
-            <label for="mail">Email address</label>
-            <p class="validateFormText">Prueba</p>
-            <input type="email" placeholder="email@company.com" />
-            <button type="submit">Subscribe to monthly newsletter</button>
-          </form>
         </div>
+        <form name="mail" id="mail">
+          <label for="mail">Email address</label>
+          <p class="validateFormText"></p>
+          <input
+            type="email"
+            placeholder="email@company.com"
+            id="emailInput"
+            required
+          />
+          <button type="submit" id="submitButton">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
         <div class="attribution">
           <p>
             Challenge by
@@ -54,13 +59,22 @@
         </div>
       </section>
       <!-- Success message start -->
-      <section>
-        <p class="successMsg">
-          Thanks for subscribing! A confirmation email has been sent to
-          ash@loremcompany.com. Please open it and click the button inside to
-          confirm your subscription. Dismiss message
-        </p>
+      <section class="success-container hidden">
+        <div class="form-container">
+          <img src="./assets/images/icon-success.svg" alt="success image" />
+          <h3>Thanks for subscribing!</h3>
+          <p>
+            A confirmation email has been sent to
+            <span>ash@loremcompany.com</span>. Please open it and click the
+            button inside to confirm your subscription.
+          </p>
+        </div>
+
+        <form name="dismiss" id="dismiss">
+          <button type="submit" id="dismissButton">Dismiss message</button>
+        </form>
       </section>
     </main>
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
