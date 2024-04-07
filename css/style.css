@@ -71,8 +71,12 @@ body {
 }
 
 #banner-img {
-  flex-grow: 1;
   width: 100%;
+}
+
+.container-column-1 {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-container {
@@ -212,7 +216,7 @@ button:hover {
 
 .attribution {
   width: fit-content;
-  justify-self: center;
+  align-self: center;
 }
 
 .attribution p {
@@ -275,8 +279,6 @@ button:hover {
   }
 
   .container-column-1 {
-    display: flex;
-    flex-direction: column;
     grid-row: 1/2;
     padding: 2.4rem 1rem 1rem 0;
   }
